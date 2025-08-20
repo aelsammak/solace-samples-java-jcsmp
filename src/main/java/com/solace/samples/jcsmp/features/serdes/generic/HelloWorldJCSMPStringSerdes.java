@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.solace.samples.jcsmp.features.serdes.primitives;
+package com.solace.samples.jcsmp.features.serdes.generic;
 
 import com.solace.serdes.Deserializer;
 import com.solace.serdes.Serializer;
