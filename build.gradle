@@ -92,6 +92,9 @@ dependencies {
     implementation group: 'io.opentelemetry', name: 'opentelemetry-exporter-otlp', version: '1.47.+'
     implementation group: 'io.opentelemetry.semconv', name: 'opentelemetry-semconv', version: '1.29.+'
 
+    // Solace SERDES Dependencies
+    implementation group: 'com.solace', name: 'solace-serdes', version: '1.+'
+
     // Avro tools for schema code generation
     avroTools group: 'org.apache.avro', name: 'avro-tools', version: '1.12.0'
 }
@@ -189,7 +192,7 @@ def scripts = [
         'dtDirectPublisher':'com/solace/samples/jcsmp/features/distributedtracing/DirectPublisherWithManualInstrumentation',
         'GuaranteedSubscriberWithSettle':'com.solace.samples.jcsmp.patterns.GuaranteedSubscriberWithSettle',
         'dtDirectSubscriber':'com/solace/samples/jcsmp/features/distributedtracing/DirectSubscriberWithManualInstrumentation',
-        'HelloWorldJCSMPStringSerdes':'com.solace.samples.jcsmp.features.serdes.primitives.HelloWorldJCSMPStringSerdes',
+        'HelloWorldJCSMPStringSerdes':'com.solace.samples.jcsmp.features.serdes.generic.HelloWorldJCSMPStringSerdes',
         'HelloWorldJCSMPAvroSerde':'com.solace.samples.jcsmp.features.serdes.avro.HelloWorldJCSMPAvroSerde',
         'AvroSerializeProducer':'com.solace.samples.jcsmp.features.serdes.avro.AvroSerializeProducer',
         'AvroDeserializeConsumer':'com.solace.samples.jcsmp.features.serdes.avro.AvroDeserializeConsumer',
