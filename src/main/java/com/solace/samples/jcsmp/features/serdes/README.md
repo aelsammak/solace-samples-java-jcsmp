@@ -10,53 +10,53 @@ To upload a schema in the Solace Schema Registry, follow these steps:
 
 1. Begin by logging into an account with write access and click on the "Create Artifact" button.
 
-   2. Leave the Group Id field empty.
+2. Leave the Group Id field empty.
 
-      ### Avro Schema
-   - **Artifact Id**: Use a unique identifier for each schema:
-     - For `user.avsc`, use `solace/samples/avro`
-     - For `clock-in-out.avsc`, use `solace/samples/clock-in-out/avro`
-     - For `create-user.avsc`, use `solace/samples/create-user/avro`
-     - For `create-user-response.avsc`, use `solace/samples/create-user-response/avro`
-   - **Type**: Select `Avro Schema`.
+     ### Avro Schema
+    - **Artifact Id**: Use a unique identifier for each schema:
+      - For `user.avsc`, use `solace/samples/avro`
+      - For `clock-in-out.avsc`, use `solace/samples/clock-in-out/avro`
+      - For `create-user.avsc`, use `solace/samples/create-user/avro`
+      - For `create-user-response.avsc`, use `solace/samples/create-user-response/avro`
+      - **Type**: Select `Avro Schema`.
 
      ### JSON Schema
-   - **Artifact Id**: Use a unique identifier for each schema:
-     - For `user.json`, use `solace/samples/json`
-     - For `clock-in-out.json`, use `solace/samples/clock-in-out/json`
-     - For `create-user.json`, use `solace/samples/create-user/json`
-     - For `create-user-response.json`, use `solace/samples/create-user-response/json`
-   - **Type**: Select `JSON Schema`.
+    - **Artifact Id**: Use a unique identifier for each schema:
+      - For `user.json`, use `solace/samples/json`
+      - For `clock-in-out.json`, use `solace/samples/clock-in-out/json`
+      - For `create-user.json`, use `solace/samples/create-user/json`
+      - For `create-user-response.json`, use `solace/samples/create-user-response/json`
+      - **Type**: Select `JSON Schema`.
 
-   >    **Note:** Each schema must be uploaded separately with its own unique Artifact Id to avoid conflicts.
+>   **Note:** Each schema must be uploaded separately with its own unique Artifact Id to avoid conflicts.
 
-     After setting the Artifact ID and Type, follow these steps:
+After setting the Artifact ID and Type, follow these steps:
 
-   4. Click the "Next" button to proceed.
+4. Click the "Next" button to proceed.
 
-   5. You can skip the Artifact Metadata section as it's not required. Simply press "Next" to continue.
+5. You can skip the Artifact Metadata section as it's not required. Simply press "Next" to continue.
 
-   6. On the Version Content Page, leave the version set to auto, or if preferred, enter a specific value of your choice.
-   
-      ### For Avro Schema:
-   7. On the Version Content Page, upload the appropriate schema file from the `jcsmp/src/main/resources/avro-schema/` directory:
-      - When using Artifact Id `solace/samples/avro`, upload `user.avsc`
-      - When using Artifact Id `solace/samples/clock-in-out/avro`, upload `clock-in-out.avsc`
-      - When using Artifact Id `solace/samples/create-user/avro`, upload `create-user.avsc`
-      - When using Artifact Id `solace/samples/create-user-response/avro`, upload `create-user-response.avsc`
+6. On the Version Content Page, leave the version set to auto, or if preferred, enter a specific value of your choice.
 
-      ### For JSON Schema:
-   7. On the Version Content Page, upload the appropriate schema file from the `jcsmp/src/main/resources/json-schema/` directory:
-      - When using Artifact Id `solace/samples/json`, upload `user.json`
-      - When using Artifact Id `solace/samples/clock-in-out/json`, upload `clock-in-out.json`
-      - When using Artifact Id `solace/samples/create-user/json`, upload `create-user.json`
-      - When using Artifact Id `solace/samples/create-user-response/json`, upload `create-user-response.json`
+### For Avro Schema:
+7. On the Version Content Page, upload the appropriate schema file from the `jcsmp/src/main/resources/avro-schema/` directory:
+   - When using Artifact Id `solace/samples/avro`, upload `user.avsc`
+   - When using Artifact Id `solace/samples/clock-in-out/avro`, upload `clock-in-out.avsc`
+   - When using Artifact Id `solace/samples/create-user/avro`, upload `create-user.avsc`
+   - When using Artifact Id `solace/samples/create-user-response/avro`, upload `create-user-response.avsc`
 
-   8. Click "Next" to move forward.
+### For JSON Schema:
+7. On the Version Content Page, upload the appropriate schema file from the `jcsmp/src/main/resources/json-schema/` directory:
+   - When using Artifact Id `solace/samples/json`, upload `user.json`
+   - When using Artifact Id `solace/samples/clock-in-out/json`, upload `clock-in-out.json`
+   - When using Artifact Id `solace/samples/create-user/json`, upload `create-user.json`
+   - When using Artifact Id `solace/samples/create-user-response/json`, upload `create-user-response.json`
 
-   9. The Version Metadata is not necessary and can be skipped.
+8. Click "Next" to move forward.
 
-   10. Finally, click the "Create" button to complete the process.
+9. The Version Metadata is not necessary and can be skipped.
+
+10. Finally, click the "Create" button to complete the process.
 
 NOTE: The registry URL, username, and password can be customized by setting environment variables. 
 If not set, the application will use default values. 
