@@ -92,6 +92,12 @@ dependencies {
     implementation group: 'io.opentelemetry', name: 'opentelemetry-exporter-otlp', version: '1.47.+'
     implementation group: 'io.opentelemetry.semconv', name: 'opentelemetry-semconv', version: '1.29.+'
 
+    // Solace SERDES Dependencies
+    implementation group: 'com.solace', name: 'solace-serdes', version: '1.+'
+    implementation(platform("com.solace:solace-schema-registry-serdes-bom:1.+"))
+    implementation("com.solace:solace-schema-registry-avro-serde")
+    implementation("com.solace:solace-schema-registry-jsonschema-serde")
+
     // Avro tools for schema code generation
     avroTools group: 'org.apache.avro', name: 'avro-tools', version: '1.12.0'
 }
@@ -142,6 +148,9 @@ jsonSchema2Pojo {
 compileJava {
     dependsOn generateAvro
     dependsOn generateJsonSchema2Pojo
+
+    // Solace SERDES Dependencies
+    implementation group: 'com.solace', name: 'solace-serdes', version: '1.+'
 }
 
 sourceSets {
