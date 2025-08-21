@@ -71,7 +71,6 @@ configurations {
 }
 
 dependencies {
-    implementation(fileTree(dir: 'lib', include: ['*.jar'], exclude: ['**/slf4j-reload4j-*.jar', '**/reload4j-*.jar']))
     // Solace Messaging API for Java Dependencies
     implementation group: 'com.solacesystems', name: 'sol-jcsmp', version: '10.+'
     // new improved logging framework, log4j2
@@ -230,7 +229,6 @@ scripts.each() { scriptName, className ->
 
 installDist {
     destinationDir = new File(project.buildDir, 'staged')
-    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
 
 assemble.dependsOn installDist
