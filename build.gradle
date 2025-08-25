@@ -94,6 +94,8 @@ dependencies {
 
     // Solace SERDES Dependencies
     implementation group: 'com.solace', name: 'solace-serdes', version: '1.+'
+    implementation group: 'com.solace', name: 'solace-schema-registry-avro-serde', version: '1.+'
+    implementation group: 'com.solace', name: 'solace-schema-registry-jsonschema-serde', version: '1.+'
 
     // Avro tools for schema code generation
     avroTools group: 'org.apache.avro', name: 'avro-tools', version: '1.12.0'
